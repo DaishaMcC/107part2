@@ -1,0 +1,25 @@
+.about {
+    background-color: #E2DFF2;
+    min-height: 600px;
+}
+
+.about img {
+    width: 100%;
+}
+
+.about .info {
+    background-color: rgba(255, 255, 255, 0.516);
+    border: 1px solid #6a6b6c;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.about h3 {
+    color: blueviolet;
+}
+
+.about h1 {
+    color: blueviolet;
+}

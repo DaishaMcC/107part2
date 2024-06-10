@@ -1,9 +1,13 @@
 .navbar {
     border: 1px solid rgb(60, 7, 97);
-    background-color: rgb(90, 29, 147);
+    background-color: rgb(191, 0, 255);
 }
 
 .navbar h1 {
     color: white;
     text-align: center;
+}
+
+.navbar .user {
+    margin-right: 10px;
 }

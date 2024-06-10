@@ -18,3 +18,8 @@
 .product .price {
     color: #333;
 }
+
+.product img {
+    width: 248px;
+    height: 200px;
+}

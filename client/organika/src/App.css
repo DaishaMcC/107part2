@@ -1,5 +1,15 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.App .container-fluid {
+  flex: 1;
+}
+
+html, body, #root, .App {
+  height: 100%;
 }
 
 .App-logo {
