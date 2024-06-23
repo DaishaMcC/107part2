@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./admin.css";
+import axios from "axios";
 
 function Admin(){
     const [allCoupons, setAllCoupons] = useState([]);
-    const [coupon, setCouoon] = useState({
+    const [coupon, setCoupon] = useState({
         code: "",
         discount: "",
     });
@@ -15,6 +16,16 @@ function Admin(){
         image: "",
         catagory: "",
     });
+
+
+    async function loadProducts() {
+        let res = await axios.get("http://127.0.0.1:5000/api/products");
+        setAllProducts(res.data);
+    }
+
+    useEffect(function(){
+        loadProducts();
+    }, []);
 
     function saveCoupon(){
         console.log("Save clicked", coupon);
@@ -43,6 +54,10 @@ function Admin(){
 
     function saveProduct(){
         setAllProducts([...allProducts, product]);
+
+        let fixedProd = {...product, price: parseFloat(product.price) };
+
+        axios.post("http://127.0.0.1:5000/api/products", fixedProd);
     }
 
     return (
